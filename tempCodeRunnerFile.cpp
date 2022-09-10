@@ -1,7 +1,1 @@
-int num = 0,i=0;
-        while(x != 0){
-            int lastbit = x&1;
-            num = (lastbit * pow(10,i)) + num;
-            x = x>>1;
-            i++;
-        }
+9 5 1 -1 -1 6 -1 -1 2 8 -1 -1 -1

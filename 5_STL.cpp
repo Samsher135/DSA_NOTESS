@@ -23,7 +23,7 @@ void vectors(){
         cout<<*it<<" ";
     }
     cout<<endl;
-    v.insert(v.begin()+5,100);
+    v.insert(v.begin()+5,100); //insert 100 at index 5
     for(auto it=v.begin();it!=v.end();it++){
         cout<<*it<<" ";
     }
@@ -97,8 +97,8 @@ void lists()
     }
     cout<<endl;
 
-    //reverse elements of list
-    LI.reverse();
+    //reverse the list
+    reverse(LI.begin(),LI.end());
 
     cout<<"All elements of List LI are after reversing: " <<endl;
     for(it = LI.begin();it!=LI.end();it++)

@@ -238,11 +238,14 @@ void catalan(int n)
 	for (int i = 2; i <= n; i++)
 	{
 		C[i] = 0;
-		//10^9+7 because catalan numbers also grows rapidly.
-		for (int j = 0; j < i; j++)
-			C[i] = (C[i] + C[j] * C[i - j - 1]) % 1000000007;
+		int l=0,r=i-1;
+		while(l != i && r!=-1){
+			C[i] += C[l] * C[r];
+			l++;
+			r--; 
+		}
 	}
-	cout << C[n] << endl;
+	cout << C[n];
 }
 
 //Inclusion-exclusion principle:-
@@ -257,4 +260,9 @@ int divisible(int n, int a, int b){
 	int c3 = n/(a*b);
 
 	return c1+c2-c3;
+}
+
+int main(){
+	catalan(9);
+	return 0;
 }
